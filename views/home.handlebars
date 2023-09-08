@@ -1,0 +1,71 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a style="font-family:courier;font-size:300%;font-weight:bolder" class="navbar-item" href="../">
+                Tech Blog
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+            <span></span>
+            <span></span>
+            </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item is-active">
+                        Home
+                </a>
+                {{#if logged_in}}
+                <a class="navbar-item" href="./dashboard">
+                        Dashboard
+                    </a>
+                
+                <a class="navbar-item" id="logout">
+                        Logout
+                    </a>
+                {{else}}
+                    <a class="navbar-item" href="/login">
+                        Login
+                    </a>
+                    <a class="navbar-item" href="/signup">
+                        Signup
+                    </a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</nav>
+ 
+<section class="hero is-info is-small is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">Featured Posts</h1>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            {{#each posts}}
+            <div class="card article">
+                <div class="card-content">
+                    <div>
+                        <h3 style="font-size:125%;font-weight:bolder"><a href="./post/{{id}}">{{title}}</a></h3> 
+                        <div class="has-text-right">
+                        <h4 class="has-text-weight-semibold">Posted by {{user.user_name}} on {{formDate createdAt}}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <p>{{contents}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>

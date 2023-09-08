@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Unlocking the Power of MVC Architecture",
+        "contents": "MVC empowers developers to maintain a robust separation of concerns, distributing their code across the Model layer for data management, the View layer for user interface design, and the Controller layer for orchestrating application logic.",
+        "user_id": "1"
+    },
+    {
+        "title": "Deciphering Authentication and Authorization",
+        "contents": "Distinguishing authentication from authorization is pivotal. Authentication entails validating one's identity, while authorization involves granting access rights within the system.",
+        "user_id": "2"
+    },
+    {
+        "title": "Revelations in Object-Relational Mapping (ORM)",
+        "contents": "My journey into Object-Relational Mapping (ORM) has been enlightening. It has significantly streamlined my approach to crafting SQL queries!",
+        "user_id": "3"
+    }
+]
